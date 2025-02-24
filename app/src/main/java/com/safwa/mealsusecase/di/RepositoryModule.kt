@@ -1,6 +1,6 @@
 package com.safwa.mealsusecase.di
 
-import com.example.mylibrary.api.ApiServices
+import com.safwa.data.datasource.api.ApiServices
 import com.safwa.data.repository.MealsRepositoryImpl
 import com.safwa.domain.repository.MealsRepository
 import dagger.Module

@@ -1,4 +1,4 @@
-package com.example.mylibrary.api
+package com.safwa.data.datasource.api
 
 object RetrofitConstant {
 
