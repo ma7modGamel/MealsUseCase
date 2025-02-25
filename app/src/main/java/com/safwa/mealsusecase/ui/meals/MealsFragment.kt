@@ -8,6 +8,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.lifecycle.lifecycleScope
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.safwa.domain.models.Category
 
 import com.safwa.mealsusecase.R
 import com.safwa.mealsusecase.databinding.FragmentMainBinding
@@ -56,11 +57,14 @@ class MealsFragment : Fragment() {
         binding.rv.layoutManager=LinearLayoutManager(context)
     }
 
+    var category :List<Category> = arrayListOf()
     private lateinit var mealsAdapter: MealsAdapter
     private fun getMeals() {
         viewModel.getMeals()
         lifecycleScope.launch {
             viewModel.categories.collect{
+//                val categories = it?.categories
+//                category= categories!!
                 mealsAdapter.submitList(it?.categories)
             }
         }

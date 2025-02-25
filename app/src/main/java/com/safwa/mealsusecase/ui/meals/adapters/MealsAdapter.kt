@@ -31,7 +31,7 @@ class MealsAdapter() : ListAdapter<Category,MealsAdapter.MealsViewHolder>(MealsD
         }
 
         override fun areContentsTheSame(oldItem: Category, newItem: Category): Boolean {
-            return oldItem == newItem
+            return false
         }
 
     }
